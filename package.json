@@ -1,0 +1,30 @@
+{
+  "name": "shopping-list",
+  "version": "1.0.0",
+  "description": "Your personal shopping assistant.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montehoover/shopping-list.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/montehoover/shopping-list/issues"
+  },
+  "homepage": "https://github.com/montehoover/shopping-list#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.6",
+    "body-parser": "^1.15.1",
+    "ejs": "^2.4.2",
+    "express": "^4.13.4",
+    "express-ejs-layouts": "^2.1.0",
+    "express-jwt": "^3.4.0",
+    "jsonwebtoken": "^7.0.0",
+    "mongoose": "^4.4.20",
+    "request": "^2.72.0"
+  }
+}

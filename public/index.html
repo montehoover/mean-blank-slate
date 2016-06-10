@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="BlankSlateApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Shopping List</title>
+
+  <!-- Bootstrap CDNs -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  
+  <!-- Angular Modules -->
+  <!-- Basic Angular -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <!-- Allows for $stateProvider, ui-view, and view templates -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+  <!-- Allows for services/factories -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-resource.js"></script>
+  <!-- Allows for flash messages -->
+  <script src="js/angular-flash-alert/dist/angular-flash.min.js"></script>
+
+
+  
+  <!-- My Angular Files -->
+  <script src="app/app.js"></script>
+  <script src="app/controllers.js"></script>
+  <script src="app/services.js"></script>
+
+  <base href="/">
+</head>
+<body>
+  
+  <div ng-include="'app/views/navbar.html'"></div>
+  <div class="container">
+
+      <div ui-view></div>
+      <div ng-hide="true">
+        <h1>MEAN Stack Blank Slate</h1>
+        <p class="text-danger">Error: Angular not connected.  This is raw html.  Try checking the spelling of your app or controller name.  Check the console for more info.</p>
+      </div>
+
+  </div>
+
+</body>
+</html>
