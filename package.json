@@ -1,7 +1,7 @@
 {
-  "name": "shopping-list",
+  "name": "mean-blank-slate",
   "version": "1.0.0",
-  "description": "Your personal shopping assistant.",
+  "description": "A clean, simple template for any MEAN stack app.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,11 +11,11 @@
     "url": "git+https://github.com/montehoover/shopping-list.git"
   },
   "author": "",
-  "license": "Apache-2.0",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/montehoover/shopping-list/issues"
+    "url": "https://github.com/montehoover/mean-blank-slate/issues"
   },
-  "homepage": "https://github.com/montehoover/shopping-list#readme",
+  "homepage": "https://github.com/montehoover/mean-blank-slate#readme",
   "dependencies": {
     "bcrypt": "^0.8.6",
     "body-parser": "^1.15.1",
