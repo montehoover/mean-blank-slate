@@ -27,9 +27,14 @@ app.use(bodyParser.urlencoded({extended: false}));
 // index.html references.  This is for security.
 app.use(express.static(__dirname + '/public'));
 
-// Run expressJWT validation on specified routes
-var secret = "blankslatejwtsecret";
-app.use('/api/users', expressJWT({secret: secret}).unless({path: ['/api/users'], method: 'post'}));
+// The following section implents JWT authentication:
+var secret = "shoppinglistjwtsecret";
+// Check every request to /api/users for a token that matches 
+// the ecryption of "secret"
+app.use('/api/users', expressJWT({secret: secret})
+  .unless({path: ['/api/users'], method: 'post'}));
+// Check every error occuring on the server for name "UnauthorizedError" and 
+// attach a more specific message
 app.use(function (err, req, res, next) {
   if (err.name === 'UnauthorizedError') {
     res.status(401).send({
