@@ -7,6 +7,13 @@ var UserSchema = mongoose.Schema({
   },
   email: {
     type: String,
+    validate: {
+      validator: function(v) {
+        return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(v);
+      },
+      message: "Must use a valid email address."
+    },
+    unique: true,
     required: [true, "An email address is required."]
   },
   password: {
