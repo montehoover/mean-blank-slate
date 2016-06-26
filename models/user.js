@@ -7,6 +7,7 @@ var UserSchema = mongoose.Schema({
   },
   email: {
     type: String,
+    // back-end validator for email address. Better if done through the front-end, but would not be as agnostic
     validate: {
       validator: function(v) {
         return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(v);
